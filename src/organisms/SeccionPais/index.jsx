@@ -2,9 +2,8 @@ import Box from '@mui/material/Box';
 import Grid from '@mui/material/Grid';
 import Typography from '@mui/material/Typography';
 import Image from 'next/image';
-import ButtonCustom from '../../atoms/ButtonCustom';
 
-const SeccionHome = () => {
+const SeccionPais = () => {
   return (
     <Grid
       container
@@ -27,20 +26,15 @@ const SeccionHome = () => {
           }}
         >
           <Box sx={{ margin: '20px' }}>
-            <Typography variant="h3">
-              Traducción de videollamadas en tiempo real.
+            <Typography variant="h5">
+              Construido para equipos globales.
             </Typography>
           </Box>
           <Box sx={{ margin: '20px' }}>
-            <Typography variant="subtitle1">
-              Viva Translate ayuda a personas de todo el mundo a comunicarse en
-              inglés, español y portugués en tiempo real. Ahorra tiempo en notas
-              de reuniones y traducciones con Viva.
+            <Typography variant="subtitle2">
+              Ayuda a las personas a comunicarse fácilmente en diferentes
+              idiomas.
             </Typography>
-          </Box>
-          <Box sx={{ marginTop: '20px' }}>
-            <ButtonCustom>Prueba Viva en Google Meets - es gratis</ButtonCustom>
-            <ButtonCustom>Comunícate con ventas</ButtonCustom>
           </Box>
         </Box>
       </Grid>
@@ -50,10 +44,11 @@ const SeccionHome = () => {
             marginTop: '50px',
             display: 'grid',
             placeItems: 'center',
+            margin: '20px',
           }}
         >
           <Image
-            src="/imgHomeMobile.jpeg"
+            src="/world.jpeg"
             alt="imgHome"
             width="0"
             height="0"
@@ -66,4 +61,4 @@ const SeccionHome = () => {
   );
 };
 
-export default SeccionHome;
+export default SeccionPais;

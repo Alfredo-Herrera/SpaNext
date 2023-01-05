@@ -1,10 +1,10 @@
-import Button from '@mui/material/Button';
 import Card from '@mui/material/Card';
 import CardActions from '@mui/material/CardActions';
 import CardContent from '@mui/material/CardContent';
 import CardMedia from '@mui/material/CardMedia';
 import Typography from '@mui/material/Typography';
 import { FC } from 'react';
+import ButtonCustom from '../../atoms/ButtonCustom/index';
 
 interface CardsProps {
   img: string;
@@ -26,7 +26,11 @@ const CardInfo: FC<CardsProps> = ({ img, title, description, url }) => {
         </Typography>
       </CardContent>
       <CardActions>
-        <Button size="small">{url}</Button>
+        {url && (
+          <ButtonCustom href={url} size="large">
+            Prueba Viva
+          </ButtonCustom>
+        )}
       </CardActions>
     </Card>
   );

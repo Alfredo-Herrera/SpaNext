@@ -3,7 +3,7 @@ import Grid from '@mui/material/Grid';
 import Box from '@mui/system/Box';
 import ButtonCustom from '../../atoms/ButtonCustom';
 
-const SeccionFinal = () => {
+const SeccionDiv = () => {
   return (
     <Grid container>
       <Grid
@@ -20,14 +20,14 @@ const SeccionFinal = () => {
       >
         <Box>
           <Typography variant="h4">
-            Observa cómo Viva puede trabajar para ti.
+            Viva Translate para profesionales.
           </Typography>
         </Box>
 
         <Box sx={{ marginTop: '20px' }}>
           <Typography variant="subtitle1">
-            Ponte en contacto con nosotros para saber cómo nuestra tecnología de
-            traducción y transcripción puede aumentar la eficacia de tu empresa.
+            La forma moderna de comunicarse, desde subtítulos hasta los
+            resúmenes de tus reuniones.
           </Typography>
         </Box>
         <ButtonCustom>Prueba Viva</ButtonCustom>
@@ -36,4 +36,4 @@ const SeccionFinal = () => {
   );
 };
 
-export default SeccionFinal;
+export default SeccionDiv;
