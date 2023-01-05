@@ -1,3 +1,4 @@
+import Box from '@mui/material/Box';
 import Grid from '@mui/material/Grid';
 import { FC, ReactChild } from 'react';
 
@@ -7,9 +8,11 @@ interface DivInfoProps {
 
 const DivInfo: FC<DivInfoProps> = ({ children }) => {
   return (
-    <Grid container sx={{ background: '#2c2c30' }}>
-      <Grid item>{children}</Grid>
-    </Grid>
+    <Box sx={{}}>
+      <Grid item sx={{ color: 'white' }}>
+        {children}
+      </Grid>
+    </Box>
   );
 };
 
