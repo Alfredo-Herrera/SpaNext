@@ -1,9 +1,11 @@
 import { Typography } from '@mui/material';
 import Grid from '@mui/material/Grid';
 import Box from '@mui/system/Box';
+import { FC } from 'react';
+import { PropsPage } from '../../../interfaces';
 import ButtonCustom from '../../atoms/ButtonCustom';
 
-const SeccionFinal = () => {
+const SeccionFinal: FC<PropsPage> = ({ isMobile }) => {
   return (
     <Grid container>
       <Grid
@@ -16,6 +18,7 @@ const SeccionFinal = () => {
           justifyContent: 'center',
           flexDirection: 'column',
           color: 'white',
+          textAlign: isMobile ? 'center' : '',
         }}
       >
         <Box>

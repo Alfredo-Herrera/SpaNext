@@ -1,6 +1,8 @@
 import { Typography } from '@mui/material';
 import Grid from '@mui/material/Grid';
 import Box from '@mui/system/Box';
+import { FC } from 'react';
+import { PropsPage } from '../../../interfaces';
 import CardPerson from '../../molecules/CardPerson';
 
 const infoCards = [
@@ -25,7 +27,7 @@ const infoCards = [
   },
 ];
 
-const SeccionUser = () => {
+const SeccionUser: FC<PropsPage> = ({ isMobile }) => {
   return (
     <Grid container>
       <Grid
@@ -39,7 +41,7 @@ const SeccionUser = () => {
           color: 'white',
         }}
       >
-        <Box sx={{ marginTop: '40px' }}>
+        <Box sx={{ marginTop: '40px', textAlign: isMobile ? 'center' : '' }}>
           <Typography variant="h4">
             Expepriencia de nuestro Usuarios.
           </Typography>

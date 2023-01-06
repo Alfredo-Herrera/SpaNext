@@ -2,9 +2,11 @@ import Box from '@mui/material/Box';
 import Grid from '@mui/material/Grid';
 import Typography from '@mui/material/Typography';
 import Image from 'next/image';
+import { FC } from 'react';
+import { PropsPage } from '../../../interfaces';
 import ButtonCustom from '../../atoms/ButtonCustom';
 
-const SeccionHome = () => {
+const SeccionHome: FC<PropsPage> = ({ isMobile }) => {
   return (
     <Grid
       container
@@ -24,6 +26,7 @@ const SeccionHome = () => {
             alignItems: 'center',
             justifyContent: 'center',
             flexDirection: 'column',
+            textAlign: isMobile ? 'center' : '',
           }}
         >
           <Box sx={{ margin: '20px' }}>

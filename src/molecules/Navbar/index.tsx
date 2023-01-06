@@ -3,7 +3,6 @@ import MenuIcon from '@mui/icons-material/Menu';
 import AppBar from '@mui/material/AppBar';
 import Box from '@mui/material/Box';
 import Button from '@mui/material/Button';
-import Divider from '@mui/material/Divider';
 import Drawer from '@mui/material/Drawer';
 import IconButton from '@mui/material/IconButton';
 import List from '@mui/material/List';
@@ -20,13 +19,14 @@ import * as React from 'react';
 interface Props {
   window?: () => Window;
   children?: any;
+  isMobile?: boolean;
 }
 
 const drawerWidth = 240;
 const navItems = ['Home', 'About', 'Contact'];
 
 export default function Navbar(props: Props) {
-  const { window } = props;
+  const { window, isMobile } = props;
   const [mobileOpen, setMobileOpen] = React.useState(false);
 
   const handleDrawerToggle = () => {
@@ -48,10 +48,6 @@ export default function Navbar(props: Props) {
 
   const drawer = (
     <Box onClick={handleDrawerToggle} sx={{ textAlign: 'center' }}>
-      <Typography variant="h6" sx={{ my: 2 }}>
-        MUI
-      </Typography>
-      <Divider />
       <List>
         {navItems.map((item) => (
           <ListItem key={item} disablePadding>
@@ -78,22 +74,26 @@ export default function Navbar(props: Props) {
           }}
         >
           <Toolbar>
-            <IconButton
-              color="inherit"
-              aria-label="open drawer"
-              edge="start"
-              onClick={handleDrawerToggle}
-              sx={{ mr: 2, display: { sm: 'none' } }}
-            >
-              <MenuIcon />
-            </IconButton>
             <Link href="/">
-              <img src="/logo.svg" alt="logoDesktop" width={35} height={35} />
+              <img
+                src="/logo.svg"
+                alt="logoDesktop"
+                width={35}
+                height={35}
+                style={{ marginLeft: isMobile ? '0px' : '20px' }}
+              />
             </Link>
+
             <Typography
               variant="h6"
               component="div"
-              sx={{ flexGrow: 1, display: { sm: 'block' } }}
+              sx={{
+                flexGrow: 1,
+                display: {
+                  sm: 'block',
+                  marginLeft: '20px',
+                },
+              }}
             >
               Viva
             </Typography>
@@ -104,6 +104,15 @@ export default function Navbar(props: Props) {
                 </Button>
               ))}
             </Box>
+            <IconButton
+              color="inherit"
+              aria-label="open drawer"
+              edge="start"
+              onClick={handleDrawerToggle}
+              sx={{ mr: 2, display: { sm: 'none' } }}
+            >
+              <MenuIcon />
+            </IconButton>
           </Toolbar>
         </AppBar>
       </HideOnScroll>
@@ -121,6 +130,8 @@ export default function Navbar(props: Props) {
             '& .MuiDrawer-paper': {
               boxSizing: 'border-box',
               width: drawerWidth,
+              background: 'black',
+              color: 'white',
             },
           }}
         >

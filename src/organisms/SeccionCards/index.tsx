@@ -1,6 +1,8 @@
 import Box from '@mui/material/Box';
 import Grid from '@mui/material/Grid';
 import Typography from '@mui/material/Typography';
+import { FC } from 'react';
+import { PropsPage } from '../../../interfaces';
 import CardInfo from '../../molecules/CardInfo/index';
 
 const infoCards = [
@@ -27,7 +29,7 @@ const infoCards = [
   },
 ];
 
-const SeccionCards = () => {
+const SeccionCards: FC<PropsPage> = ({ isMobile }) => {
   return (
     <Grid container>
       <Grid
@@ -64,7 +66,7 @@ const SeccionCards = () => {
                 marginBottom: '30px',
               }}
             >
-              <CardInfo {...itemCard} />
+              <CardInfo {...itemCard} isMobile={isMobile} />
             </Grid>
           ))}
         </Grid>

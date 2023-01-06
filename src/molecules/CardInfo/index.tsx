@@ -11,6 +11,7 @@ interface CardsProps {
   title: string;
   description: string;
   url: string;
+  isMobile: boolean;
 }
 
 const CardInfo: FC<CardsProps> = ({ img, title, description, url }) => {
@@ -25,7 +26,13 @@ const CardInfo: FC<CardsProps> = ({ img, title, description, url }) => {
           {description}
         </Typography>
       </CardContent>
-      <CardActions>
+      <CardActions
+        sx={{
+          display: 'flex',
+          alignItems: 'center',
+          justifyContent: 'center',
+        }}
+      >
         {url && (
           <ButtonCustom href={url} size="large">
             Prueba Viva

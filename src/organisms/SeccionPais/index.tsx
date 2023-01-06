@@ -2,8 +2,10 @@ import Box from '@mui/material/Box';
 import Grid from '@mui/material/Grid';
 import Typography from '@mui/material/Typography';
 import Image from 'next/image';
+import { FC } from 'react';
+import { PropsPage } from '../../../interfaces';
 
-const SeccionPais = () => {
+const SeccionPais: FC<PropsPage> = ({ isMobile }) => {
   return (
     <Grid
       container
@@ -12,6 +14,7 @@ const SeccionPais = () => {
         color: 'white',
         display: 'flex',
         alignItems: 'center',
+        textAlign: isMobile ? 'center' : '',
       }}
       md={12}
     >
