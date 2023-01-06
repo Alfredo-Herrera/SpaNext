@@ -3,31 +3,20 @@ import useMediaQuery from '@mui/material/useMediaQuery';
 import { Parallax, ParallaxProvider } from 'react-scroll-parallax';
 import Navbar from '../src/molecules/Navbar';
 import SeccionCards from '../src/organisms/SeccionCards';
-import SeccionDiv from '../src/organisms/SeccionDiv';
 import SeccionFinal from '../src/organisms/SeccionFinal';
-import SeccionHome from '../src/organisms/SeccionHome';
 import SeccionPais from '../src/organisms/SeccionPais';
 import SeccionTractor from '../src/organisms/SeccionTraductor';
-import SeccionUser from '../src/organisms/SeccionUsers';
 
-export default function Home() {
+export default function About() {
   const isMobile = useMediaQuery('(max-width:600px)');
   return (
     <ParallaxProvider>
       <Grid container>
-        <Grid container>
+        <Grid item md={12}>
           <Grid item md={12}>
             <Navbar isMobile={isMobile} />
           </Grid>
-          <Grid item md={12}>
-            <Parallax speed={-10}>
-              <SeccionHome isMobile={isMobile} />
-            </Parallax>
-          </Grid>
-          <Grid item md={12}>
-            <SeccionDiv isMobile={isMobile} />
-          </Grid>
-          <Grid item md={12}>
+          <Grid item md={12} sx={{ marginTop: '30px' }}>
             <SeccionCards isMobile={isMobile} />
           </Grid>
           <Grid item md={12}>
@@ -37,11 +26,6 @@ export default function Home() {
           </Grid>
           <Grid item md={12}>
             <SeccionPais isMobile={isMobile} />
-          </Grid>
-          <Grid item md={12}>
-            <Parallax speed={-10}>
-              <SeccionUser isMobile={isMobile} />
-            </Parallax>
           </Grid>
           <Grid item md={12}>
             <SeccionFinal isMobile={isMobile} />

@@ -16,9 +16,8 @@ const SeccionPais: FC<PropsPage> = ({ isMobile }) => {
         alignItems: 'center',
         textAlign: isMobile ? 'center' : '',
       }}
-      md={12}
     >
-      <Grid item md={6} spacing={3}>
+      <Grid item md={6}>
         <Box
           sx={{
             marginTop: '50px',
@@ -45,9 +44,10 @@ const SeccionPais: FC<PropsPage> = ({ isMobile }) => {
         <Box
           sx={{
             marginTop: '50px',
-            display: 'grid',
-            placeItems: 'center',
-            margin: '20px',
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'center',
+            flexDirection: 'column',
           }}
         >
           <Image

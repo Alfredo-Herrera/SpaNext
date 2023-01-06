@@ -5,7 +5,7 @@ import Image from 'next/image';
 import { FC } from 'react';
 import { PropsPage } from '../../../interfaces/index';
 
-const SeccionTractor: FC <PropsPage> = ({isMobile}) => {
+const SeccionTractor: FC<PropsPage> = ({ isMobile }) => {
   return (
     <Grid
       container
@@ -16,7 +16,6 @@ const SeccionTractor: FC <PropsPage> = ({isMobile}) => {
         alignItems: 'center',
         textAlign: isMobile ? 'center' : '',
       }}
-      md={12}
     >
       <Grid item md={6}>
         <Box
@@ -37,7 +36,7 @@ const SeccionTractor: FC <PropsPage> = ({isMobile}) => {
           />
         </Box>
       </Grid>
-      <Grid item md={6} spacing={3}>
+      <Grid item md={6}>
         <Box
           sx={{
             marginTop: '50px',

@@ -33,6 +33,7 @@ const SeccionCards: FC<PropsPage> = ({ isMobile }) => {
   return (
     <Grid container>
       <Grid
+        item
         md={12}
         sx={{
           background: 'black',

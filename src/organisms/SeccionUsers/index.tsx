@@ -7,20 +7,20 @@ import CardPerson from '../../molecules/CardPerson';
 
 const infoCards = [
   {
-    img: '/person1.jpeg',
+    img: '/person1.png',
     title: 'David Levesque, fundador de @Brite ',
     description:
       'Me he pasado los últimos cuatro años intentando coordinar equipos desde Ucrania hasta Zimbabue y Pakistán. Poder comunicarme directamente con los ingenieros de Viva cambia mi forma de trabajar',
   },
   {
-    img: '/person2.jpeg',
+    img: '/person2.png',
     title:
       'Alexandra Rodríguez, freelance de marketing de rendimiento y crecimiento',
     description:
       'Me he pasado los últimos cuatro años intentando coordinar equipos desde Ucrania hasta Zimbabue y Pakistán. Poder comunicarme directamente con los ingenieros de Viva cambia mi forma de trabajar',
   },
   {
-    img: '/person3.jpeg',
+    img: '/person3.png',
     title: 'Gustavo Moreno, CTO @Kiwi',
     description:
       '"La conversión de voz a texto me pareció bastante precisa y la traducción muy comprensible. Se pueden mantener conversaciones fluidas".',
@@ -40,6 +40,7 @@ const SeccionUser: FC<PropsPage> = ({ isMobile }) => {
           flexDirection: 'column',
           color: 'white',
         }}
+        item
       >
         <Box sx={{ marginTop: '40px', textAlign: isMobile ? 'center' : '' }}>
           <Typography variant="h4">

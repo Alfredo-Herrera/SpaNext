@@ -23,7 +23,7 @@ const CardAvatar: FC<CardsProps> = ({ img, title, description }) => {
           marginTop: '20px',
         }}
       >
-        <Avatar alt={title} src={img} sx={{ width: 56, height: 56 }} />
+        <Avatar alt={title} src={img} sx={{ width: 86, height: 86 }} />
       </Box>
       <CardContent>
         <Typography gutterBottom variant="h5" component="div">

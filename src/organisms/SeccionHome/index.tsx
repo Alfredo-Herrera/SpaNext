@@ -16,9 +16,8 @@ const SeccionHome: FC<PropsPage> = ({ isMobile }) => {
         display: 'flex',
         alignItems: 'center',
       }}
-      md={12}
     >
-      <Grid item md={6} spacing={3}>
+      <Grid item md={6}>
         <Box
           sx={{
             marginTop: '50px',
@@ -43,7 +42,9 @@ const SeccionHome: FC<PropsPage> = ({ isMobile }) => {
           </Box>
           <Box sx={{ marginTop: '20px' }}>
             <ButtonCustom>Prueba Viva en Google Meets - es gratis</ButtonCustom>
-            <ButtonCustom>Comunícate con ventas</ButtonCustom>
+            <ButtonCustom sx={{ marginLeft: '20px' }}>
+              Comunícate con ventas
+            </ButtonCustom>
           </Box>
         </Box>
       </Grid>

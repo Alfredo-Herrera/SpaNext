@@ -23,7 +23,12 @@ interface Props {
 }
 
 const drawerWidth = 240;
-const navItems = ['Home', 'About', 'Contact'];
+const navItems = [
+  { title: 'Home', url: '/' },
+  { title: 'Nosotros', url: '/about' },
+  { title: 'Clientes', url: '/customers' },
+  { title: 'Contactanos', url: '/contact' },
+];
 
 export default function Navbar(props: Props) {
   const { window, isMobile } = props;
@@ -50,11 +55,13 @@ export default function Navbar(props: Props) {
     <Box onClick={handleDrawerToggle} sx={{ textAlign: 'center' }}>
       <List>
         {navItems.map((item) => (
-          <ListItem key={item} disablePadding>
-            <ListItemButton sx={{ textAlign: 'center' }}>
-              <ListItemText primary={item} />
-            </ListItemButton>
-          </ListItem>
+          <Link key={item.url} href={`${item.url}`}>
+            <ListItem key={item.title} disablePadding>
+              <ListItemButton sx={{ textAlign: 'center' }}>
+                <ListItemText primary={item.title} />
+              </ListItemButton>
+            </ListItem>
+          </Link>
         ))}
       </List>
     </Box>
@@ -69,14 +76,19 @@ export default function Navbar(props: Props) {
         <AppBar
           component="nav"
           sx={{
-            background: 'rgba(53, 53, 53, 0.47)',
+            background: '#131415',
+            backgroundOpaque: 'rgba(19,20,21,.7)',
+            backgroundHighlight: ' #2c2c30',
+            backgroundHighlightHighlight: '#393941',
+            backgroundHighlightTransparent: 'rgba(66,66,66,.7)',
+            backgroundButton: '#1f2124',
             backdropFilter: ' blur(62px)',
           }}
         >
           <Toolbar>
             <Link href="/">
               <img
-                src="/logo.svg"
+                src="/logo.png"
                 alt="logoDesktop"
                 width={35}
                 height={35}
@@ -99,9 +111,9 @@ export default function Navbar(props: Props) {
             </Typography>
             <Box sx={{ display: { xs: 'none', sm: 'block' } }}>
               {navItems.map((item) => (
-                <Button key={item} sx={{ color: '#fff' }}>
-                  {item}
-                </Button>
+                <Link key={item.title} href={`${item.url}`}>
+                  <Button sx={{ color: '#fff',  }}>{item.title}</Button>
+                </Link>
               ))}
             </Box>
             <IconButton
@@ -130,7 +142,13 @@ export default function Navbar(props: Props) {
             '& .MuiDrawer-paper': {
               boxSizing: 'border-box',
               width: drawerWidth,
-              background: 'black',
+              background: '#131415',
+              backgroundOpaque: 'rgba(19,20,21,.7)',
+              backgroundHighlight: ' #2c2c30',
+              backgroundHighlightHighlight: '#393941',
+              backgroundHighlightTransparent: 'rgba(66,66,66,.7)',
+              backgroundButton: '#1f2124',
+              backdropFilter: ' blur(62px)',
               color: 'white',
             },
           }}
