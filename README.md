@@ -59,7 +59,7 @@ Para ejecutar las pruebas es necesario dirifirse a la terminal y ejecutar el sig
 
 ## 🔗 Url 
 
-[https://SPAVivaTraslate.app/](https://feature-createcomponents.d27m9bkband9z6.amplifyapp.com/)
+[https://SPAVivaTraslate.app/](https://main.d27m9bkband9z6.amplifyapp.com/)
 
 
 ### ✍🏻 Features Adicionales
